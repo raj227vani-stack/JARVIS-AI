@@ -25,6 +25,7 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;min-h
 .wake-dot{width:8px;height:8px;border-radius:50%;background:var(--red);animation:blink 1.5s ease-in-out infinite}
 .wake-dot.off{background:rgba(255,255,255,0.2);animation:none}
 @keyframes blink{0%,100%{opacity:0.4}50%{opacity:1;box-shadow:0 0 8px var(--red)}}
+
 /* GESTURE PANEL */
 .gesture-panel{width:100%;background:rgba(0,229,255,0.04);border:1px solid rgba(0,229,255,0.15);border-radius:12px;padding:12px 14px;margin-bottom:12px;display:flex;flex-direction:column;gap:8px}
 .gesture-header{display:flex;justify-content:space-between;align-items:center}
@@ -38,9 +39,11 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;min-h
 .gesture-labels{display:flex;gap:6px;flex-wrap:wrap}
 .g-label{font-family:'Space Mono',monospace;font-size:9px;padding:3px 8px;border-radius:4px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.4)}
 .g-label.active{background:rgba(0,229,255,0.15);border-color:rgba(0,229,255,0.4);color:#00e5ff}
+
 /* TIMER */
 .timer-bar{width:100%;background:rgba(255,136,0,0.06);border:1px solid rgba(255,136,0,0.2);border-radius:10px;padding:10px 14px;margin-bottom:10px;font-family:'Space Mono',monospace;font-size:12px;color:#ff8800;display:none;justify-content:space-between;align-items:center}
 .timer-bar.active{display:flex}
+
 /* RING */
 .ring-wrap{position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center;margin:8px 0 16px;user-select:none}
 #particleCanvas{position:absolute;inset:0;border-radius:50%;pointer-events:none}
@@ -70,6 +73,7 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;min-h
 .status-line.gesture-s{color:#00e5ff}
 .wave-wrap{width:100%;height:50px;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:3px}
 .wave-bar{width:4px;border-radius:2px;background:var(--red);height:6px;transition:height 0.1s ease;opacity:0.6}
+
 /* CHAT */
 .chat-box{width:100%;background:rgba(255,23,68,0.04);border:1px solid var(--border);border-radius:14px;max-height:280px;overflow-y:auto;padding:14px;margin-bottom:14px;scroll-behavior:smooth}
 .chat-box::-webkit-scrollbar{width:3px}
@@ -91,6 +95,7 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;min-h
 .typing-dot:nth-child(2){animation-delay:0.2s}
 .typing-dot:nth-child(3){animation-delay:0.4s}
 @keyframes tb{0%,60%,100%{transform:translateY(0);opacity:0.5}30%{transform:translateY(-6px);opacity:1}}
+
 /* INPUT */
 .input-row{width:100%;display:flex;gap:8px;margin-bottom:14px}
 .text-input{flex:1;background:rgba(255,23,68,0.06);border:1px solid var(--border);border-radius:10px;padding:12px 14px;color:var(--white);font-family:'Syne',sans-serif;font-size:13px;outline:none;transition:border-color 0.2s}
@@ -98,17 +103,21 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;min-h
 .text-input::placeholder{color:rgba(255,255,255,0.2)}
 .send-btn{width:46px;height:46px;border-radius:10px;background:var(--red);border:none;color:#000;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
 .send-btn:active{transform:scale(0.96)}
+
 /* QUICK */
 .quick-title{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:8px;align-self:flex-start}
 .quick-grid{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:16px}
 .quick-btn{background:rgba(255,23,68,0.05);border:1px solid rgba(255,23,68,0.15);border-radius:9px;padding:9px 12px;color:rgba(255,255,255,0.6);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;cursor:pointer;text-align:left;transition:all 0.2s;display:flex;align-items:center;gap:7px}
 .quick-btn:hover{background:rgba(255,23,68,0.12);border-color:rgba(255,23,68,0.35);color:var(--white)}
 .quick-btn .qi{font-size:14px}
+
 /* CONTROLS */
-.controls{width:100%;display:flex;gap:8px;margin-bottom:14px}
 .ctrl{flex:1;padding:11px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:9px;color:rgba(255,255,255,0.5);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;cursor:pointer;text-transform:uppercase;transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:6px}
 .ctrl:hover{background:rgba(255,23,68,0.08);border-color:rgba(255,23,68,0.2);color:var(--white)}
 .ctrl.on{background:rgba(255,23,68,0.12);border-color:rgba(255,23,68,0.35);color:var(--red)}
+
+.controls{width:100%;display:flex;gap:8px;margin-bottom:14px}
+
 /* STATS */
 .stats-row{width:100%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px}
 .stat{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 8px;text-align:center}
@@ -213,8 +222,8 @@ body{background:var(--bg);color:var(--white);font-family:'Syne',sans-serif;min-h
 
 <script>
 // ═══════════════════════════════════════════════
-//   PASTE YOUR API KEY HERE — ONLY CHANGE THIS
-const API_KEY = 'sk-ant-PASTE_YOUR_KEY_HERE';
+//   JARVIS AI — Powered by Claude
+//   No API key needed — uses Claude API via proxy
 // ═══════════════════════════════════════════════
 
 const TM_MODEL_URL = 'https://teachablemachine.withgoogle.com/models/OSHCKVSEZ/';
@@ -231,6 +240,8 @@ let preferredVoice = null;
 let timerInterval = null;
 let gestureEnabled = false, tmModel = null, camStream = null;
 let gestureLoop = null, lastGestureTime = 0, gestureClasses = [];
+let wakeRestartTimer = null;
+let wakeActive_lockout = false;
 
 let AC; try{ AC = new (window.AudioContext||window.webkitAudioContext)(); }catch(e){}
 
@@ -256,16 +267,31 @@ setInterval(()=>{const s=Math.floor((Date.now()-sessionStart)/1000);document.get
 // ── VOICES ─────────────────────────────────────
 function loadVoices(){
   const v=synth.getVoices();
-  const p=['Samantha','Google UK English Female','Microsoft Aria','Zira','Victoria','Karen'];
-  for(const n of p){const f=v.find(x=>x.name.includes(n.split(' ')[0]));if(f){preferredVoice=f;break;}}
-  if(!preferredVoice)preferredVoice=v.find(x=>x.lang.startsWith('en'))||v[0];
+  // Prefer a clear, authoritative English voice
+  const preferred=['Google UK English Female','Samantha','Microsoft Aria Online (Natural)','Microsoft Aria','Karen','Moira','Tessa','Victoria','Zira'];
+  for(const n of preferred){
+    const f=v.find(x=>x.name===n)||v.find(x=>x.name.includes(n.split(' ')[0]));
+    if(f){preferredVoice=f;break;}
+  }
+  if(!preferredVoice){
+    preferredVoice=v.find(x=>x.lang==='en-GB')||v.find(x=>x.lang.startsWith('en'))||v[0];
+  }
 }
-speechSynthesis.onvoiceschanged=loadVoices; loadVoices();
+if(speechSynthesis.onvoiceschanged!==undefined){speechSynthesis.onvoiceschanged=loadVoices;}
+loadVoices();
+setTimeout(loadVoices,500);
 
 // ── SOUND FX ───────────────────────────────────
 function beep(f=440,d=.15,t='sine',v=.25){
   if(!AC)return;
-  try{const o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);o.type=t;o.frequency.value=f;g.gain.setValueAtTime(v,AC.currentTime);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+d);o.start();o.stop(AC.currentTime+d);}catch(e){}
+  try{
+    const o=AC.createOscillator(),g=AC.createGain();
+    o.connect(g);g.connect(AC.destination);
+    o.type=t;o.frequency.value=f;
+    g.gain.setValueAtTime(v,AC.currentTime);
+    g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+d);
+    o.start();o.stop(AC.currentTime+d);
+  }catch(e){}
 }
 function sfxWake(){beep(600,.08,'sine',.2);setTimeout(()=>beep(900,.1,'sine',.25),100);setTimeout(()=>beep(1200,.12,'sine',.3),220);}
 function sfxThink(){beep(600,.05,'square',.05);setTimeout(()=>beep(700,.05,'square',.05),200);setTimeout(()=>beep(800,.05,'square',.05),400);}
@@ -301,297 +327,609 @@ function setRing(state){
   else if(state==='gesture'){core.classList.add('gesture');icon.textContent='👁';label.textContent='GESTURE';status.className='status-line gesture-s';status.textContent='Gesture detected!';}
 }
 
-// ── WAKE WORD ENGINE ───────────────────────────
+// ── WAKE WORD ENGINE (Robust) ──────────────────
+// Uses a continuous recognition loop with proper restart logic
+// Triggers on: "hey jarvis", "jarvis", phonetic variants like "hey travis"
+const WAKE_PHRASES = ['hey jarvis','hey jarvis','jarvis','hey travis','hey jarvi','a jarvis','hey service'];
+
+function normalizeForWake(text){
+  return text.toLowerCase()
+    .replace(/[^\w\s]/g,'')
+    .replace(/\s+/g,' ')
+    .trim();
+}
+
+function isWakeWord(text){
+  const n = normalizeForWake(text);
+  for(const phrase of WAKE_PHRASES){
+    if(n.includes(phrase)) return true;
+  }
+  // Fuzzy: ends with "jarvis" variant
+  if(/[hj]e[iy]?\s*[jt][ar][rv][iv][si]s?$/i.test(n)) return true;
+  return false;
+}
+
 function startWakeListener(){
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR)return;
-  wakeRec=new SR();
-  wakeRec.lang='en-US';wakeRec.continuous=true;wakeRec.interimResults=true;
+  if(!SR){
+    document.getElementById('wakeStatusText').textContent='Speech not supported on this browser';
+    return;
+  }
 
-  wakeRec.onresult=(e)=>{
-    for(let i=e.resultIndex;i<e.results.length;i++){
-      const t=e.results[i][0].transcript.toLowerCase();
-      if((t.includes('hey jarvis')||t.includes('jarvis')||t.includes('hey travis'))&&!wakeActive&&!isListening&&!isSpeaking&&!isThinking){
-        wakeActive=true;
-        onWake();
+  // Prevent double-start
+  if(wakeStarted && wakeRec){
+    try{ wakeRec.stop(); }catch(e){}
+  }
+
+  wakeRec = new SR();
+  wakeRec.lang = 'en-US';
+  wakeRec.continuous = true;
+  wakeRec.interimResults = true;
+  wakeRec.maxAlternatives = 3;
+
+  wakeRec.onresult = (e) => {
+    if(wakeActive_lockout || wakeActive || isListening || isSpeaking || isThinking) return;
+
+    for(let i = e.resultIndex; i < e.results.length; i++){
+      // Check all alternatives
+      for(let j = 0; j < e.results[i].length; j++){
+        const transcript = e.results[i][j].transcript;
+        if(isWakeWord(transcript)){
+          wakeActive = true;
+          wakeActive_lockout = true;
+          onWake();
+          return;
+        }
       }
     }
   };
-  wakeRec.onend=()=>{if(wakeStarted&&!isListening)setTimeout(()=>{try{wakeRec.start();}catch(e){}},300);};
-  wakeRec.onerror=(e)=>{if(e.error!=='no-speech')setTimeout(()=>{try{wakeRec.start();}catch(e){}},800);};
-  try{wakeRec.start();wakeStarted=true;}catch(e){}
-  document.getElementById('wakeDot').className='wake-dot';
-  document.getElementById('wakeStatusText').textContent='Listening for "Hey JARVIS"...';
+
+  wakeRec.onend = () => {
+    wakeStarted = false;
+    if(!isListening && !isSpeaking && !isThinking && !wakeActive){
+      // Auto-restart after brief pause
+      clearTimeout(wakeRestartTimer);
+      wakeRestartTimer = setTimeout(() => {
+        startWakeListener();
+      }, 400);
+    }
+  };
+
+  wakeRec.onerror = (e) => {
+    wakeStarted = false;
+    const delay = (e.error === 'no-speech') ? 200 : 1000;
+    if(!isListening && !isSpeaking && !isThinking && !wakeActive){
+      clearTimeout(wakeRestartTimer);
+      wakeRestartTimer = setTimeout(() => {
+        startWakeListener();
+      }, delay);
+    }
+  };
+
+  try{
+    wakeRec.start();
+    wakeStarted = true;
+    document.getElementById('wakeDot').className = 'wake-dot';
+    document.getElementById('wakeStatusText').textContent = 'Listening for "Hey JARVIS"...';
+  }catch(e){
+    wakeStarted = false;
+    clearTimeout(wakeRestartTimer);
+    wakeRestartTimer = setTimeout(startWakeListener, 1000);
+  }
 }
 
 function onWake(){
   sfxWake();
-  try{wakeRec.stop();}catch(e){}
-  wakeStarted=false;
-  const utt=new SpeechSynthesisUtterance('Yes Boss');
-  if(preferredVoice)utt.voice=preferredVoice;
-  utt.rate=1.0;utt.pitch=1.05;utt.volume=0.95;
-  isSpeaking=true;setRing('speak');
-  utt.onend=()=>{isSpeaking=false;startCmdListen();};
-  synth.cancel();synth.speak(utt);
+
+  // Stop wake listener
+  try{ wakeRec.stop(); }catch(e){}
+  wakeStarted = false;
+  clearTimeout(wakeRestartTimer);
+
+  // Stop any ongoing speech
+  synth.cancel();
+
+  // Speak acknowledgement then start listening
+  const utt = new SpeechSynthesisUtterance('Yes Boss');
+  if(preferredVoice) utt.voice = preferredVoice;
+  utt.rate = 1.05; utt.pitch = 1.05; utt.volume = 0.95;
+
+  isSpeaking = true;
+  setRing('speak');
+
+  utt.onend = () => {
+    isSpeaking = false;
+    startCmdListen();
+  };
+  utt.onerror = () => {
+    isSpeaking = false;
+    startCmdListen();
+  };
+
+  synth.speak(utt);
 }
 
+// ── COMMAND LISTENER ───────────────────────────
 function startCmdListen(){
-  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
-  if(!SR)return;
-  if(cmdRec)try{cmdRec.stop();}catch(e){}
-  cmdRec=new SR();
-  cmdRec.lang='en-US';cmdRec.continuous=false;cmdRec.interimResults=true;
-  cmdRec._f='';cmdRec._i='';
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SR){ resetWake(); return; }
 
-  cmdRec.onstart=()=>{isListening=true;setRing('listen');sfxDone();};
-  cmdRec.onresult=(e)=>{
-    let fin='',itr='';
-    for(let i=e.resultIndex;i<e.results.length;i++){
-      const t=e.results[i][0].transcript;
-      if(e.results[i].isFinal)fin+=t;else itr+=t;
+  if(cmdRec){ try{ cmdRec.stop(); }catch(e){} }
+
+  cmdRec = new SR();
+  cmdRec.lang = 'en-US';
+  cmdRec.continuous = false;
+  cmdRec.interimResults = true;
+  cmdRec.maxAlternatives = 3;
+  cmdRec._finalText = '';
+  cmdRec._interimText = '';
+  cmdRec._hasResult = false;
+
+  // 8-second timeout safety net
+  const cmdTimeout = setTimeout(() => {
+    if(isListening){
+      try{ cmdRec.stop(); }catch(e){}
     }
-    if(fin)cmdRec._f=fin;if(itr)cmdRec._i=itr;
-    document.getElementById('statusLine').textContent='Heard: "'+(fin||itr)+'"';
+  }, 8000);
+
+  cmdRec.onstart = () => {
+    isListening = true;
+    setRing('listen');
+    sfxDone();
   };
-  cmdRec.onend=async()=>{
-    isListening=false;
-    document.getElementById('micRipple').className='mic-ripple';
-    const heard=(cmdRec._f||cmdRec._i).trim();
-    if(heard.length>1){
+
+  cmdRec.onresult = (e) => {
+    let finalText = '';
+    let interimText = '';
+    for(let i = e.resultIndex; i < e.results.length; i++){
+      const t = e.results[i][0].transcript;
+      if(e.results[i].isFinal) finalText += t;
+      else interimText += t;
+    }
+    if(finalText){ cmdRec._finalText = finalText; cmdRec._hasResult = true; }
+    if(interimText) cmdRec._interimText = interimText;
+
+    const display = (finalText || interimText).trim();
+    if(display) document.getElementById('statusLine').textContent = 'Heard: "' + display + '"';
+  };
+
+  cmdRec.onend = async () => {
+    clearTimeout(cmdTimeout);
+    isListening = false;
+    document.getElementById('micRipple').className = 'mic-ripple';
+
+    // Prefer final, fallback to interim
+    const heard = (cmdRec._finalText || cmdRec._interimText).trim();
+
+    if(heard.length > 1){
       await handleInput(heard);
-    }else{
-      setRing('idle');
+    } else {
+      // Nothing heard — say so and reset
+      speak("I didn't catch that, Boss. Try again.");
+      setTimeout(resetWake, 2500);
+      return;
     }
-    wakeActive=false;
-    setTimeout(()=>{wakeStarted=false;startWakeListener();},1200);
+    resetWake();
   };
-  cmdRec.onerror=()=>{isListening=false;setRing('idle');wakeActive=false;setTimeout(()=>{wakeStarted=false;startWakeListener();},500);};
-  try{cmdRec.start();}catch(e){}
+
+  cmdRec.onerror = (e) => {
+    clearTimeout(cmdTimeout);
+    isListening = false;
+    setRing('idle');
+    if(e.error === 'no-speech'){
+      speak("I didn't hear anything, Boss. Say Hey JARVIS to try again.");
+    }
+    setTimeout(resetWake, 2000);
+  };
+
+  try{ cmdRec.start(); }catch(e){ resetWake(); }
+}
+
+function resetWake(){
+  wakeActive = false;
+  setTimeout(() => {
+    wakeActive_lockout = false;
+    if(!isListening && !isSpeaking && !isThinking){
+      startWakeListener();
+    }
+  }, 800);
 }
 
 // ── GESTURE (TEACHABLE MACHINE) ────────────────
 async function enableGesture(){
-  const gs=document.getElementById('gestureStatus');
-  gs.textContent='Loading model...';gs.className='gesture-status on';
+  const gs = document.getElementById('gestureStatus');
+  gs.textContent = 'Loading model...'; gs.className = 'gesture-status on';
   try{
-    const stream=await navigator.mediaDevices.getUserMedia({video:true});
-    camStream=stream;
-    const video=document.getElementById('gestureVideo');
-    video.srcObject=stream;
-    tmModel=await tmImage.load(TM_MODEL_URL+'model.json',TM_MODEL_URL+'metadata.json');
-    gestureClasses=tmModel.getClassLabels();
-    const ld=document.getElementById('gestureLabels');
-    ld.innerHTML='';
-    gestureClasses.forEach((cl,i)=>{const s=document.createElement('span');s.className='g-label';s.id='gl'+i;s.textContent=cl;ld.appendChild(s);});
+    const stream = await navigator.mediaDevices.getUserMedia({video:{facingMode:'user'}});
+    camStream = stream;
+    const video = document.getElementById('gestureVideo');
+    video.srcObject = stream;
+    await new Promise(r => { video.onloadedmetadata = r; });
+
+    gs.textContent = 'Loading gesture AI...';
+    tmModel = await tmImage.load(TM_MODEL_URL + 'model.json', TM_MODEL_URL + 'metadata.json');
+    gestureClasses = tmModel.getClassLabels();
+
+    const ld = document.getElementById('gestureLabels');
+    ld.innerHTML = '';
+    gestureClasses.forEach((cl, i) => {
+      const s = document.createElement('span');
+      s.className = 'g-label'; s.id = 'gl' + i;
+      s.textContent = cl; ld.appendChild(s);
+    });
+
     document.getElementById('camWrap').classList.add('show');
-    gs.textContent='● ACTIVE — gestures detected';gs.className='gesture-status on';
-    gestureEnabled=true;
-    gestureLoop=setInterval(predictGesture,600);
+    gs.textContent = '● ACTIVE — gestures detected'; gs.className = 'gesture-status on';
+    gestureEnabled = true;
+    gestureLoop = setInterval(predictGesture, 500);
     speak('Gesture mode enabled, Boss. I can see you now.');
-    addMsg('gmsg','👁 Gesture mode ON. I can see you!');
-  }catch(err){
-    gs.textContent='Camera error: '+err.message;gs.className='gesture-status';
+    addMsg('gmsg', '👁 Gesture mode ON. I can see you!');
+  } catch(err){
+    gs.textContent = 'Camera error: ' + err.message; gs.className = 'gesture-status';
     speak('Could not enable camera, Boss. Please allow camera access.');
   }
 }
 
 function disableGesture(){
-  gestureEnabled=false;clearInterval(gestureLoop);
-  if(camStream)camStream.getTracks().forEach(t=>t.stop());
+  gestureEnabled = false; clearInterval(gestureLoop);
+  if(camStream) camStream.getTracks().forEach(t => t.stop());
   document.getElementById('camWrap').classList.remove('show');
-  document.getElementById('gestureLabels').innerHTML='';
-  document.getElementById('gestureStatus').textContent='Say "Hey JARVIS enable gesture mode"';
-  document.getElementById('gestureStatus').className='gesture-status';
+  document.getElementById('gestureLabels').innerHTML = '';
+  document.getElementById('gestureStatus').textContent = 'Say "Hey JARVIS enable gesture mode"';
+  document.getElementById('gestureStatus').className = 'gesture-status';
   speak('Gesture mode disabled, Boss.');
-  addMsg('gmsg','👁 Gesture mode OFF.');
+  addMsg('gmsg', '👁 Gesture mode OFF.');
 }
 
 async function predictGesture(){
-  if(!tmModel||!gestureEnabled)return;
-  const v=document.getElementById('gestureVideo');
-  if(v.readyState<2)return;
+  if(!tmModel || !gestureEnabled) return;
+  const v = document.getElementById('gestureVideo');
+  if(v.readyState < 2) return;
   try{
-    const preds=await tmModel.predict(v);
-    let top=preds[0];preds.forEach(p=>{if(p.probability>top.probability)top=p;});
-    document.getElementById('gestureOverlay').textContent=top.className+' ('+(top.probability*100).toFixed(0)+'%)';
-    gestureClasses.forEach((cl,i)=>{const el=document.getElementById('gl'+i);if(el)el.className=cl===top.className?'g-label active':'g-label';});
-    if(top.probability>0.85&&Date.now()-lastGestureTime>3000){lastGestureTime=Date.now();onGesture(top.className);}
-  }catch(e){}
+    const preds = await tmModel.predict(v);
+    let top = preds[0];
+    preds.forEach(p => { if(p.probability > top.probability) top = p; });
+
+    document.getElementById('gestureOverlay').textContent = top.className + ' (' + (top.probability * 100).toFixed(0) + '%)';
+    gestureClasses.forEach((cl, i) => {
+      const el = document.getElementById('gl' + i);
+      if(el) el.className = cl === top.className ? 'g-label active' : 'g-label';
+    });
+
+    // Trigger gesture action only if confident (85%) and not too recent (3s cooldown)
+    if(top.probability > 0.85 && Date.now() - lastGestureTime > 3000){
+      lastGestureTime = Date.now();
+      onGesture(top.className);
+    }
+  } catch(e){}
 }
 
 function onGesture(g){
-  setRing('gesture');beep(500,.1,'sine',.2);
-  const lc=g.toLowerCase();
-  let action='';
-  // ── Map your trained class names here ──
-  if(lc.includes('thumbs up')||lc.includes('thumbs_up')){action='Give me music suggestions';}
-  else if(lc.includes('thumbs down')||lc.includes('thumbs_down')){action='Tell me a joke';}
-  else if(lc.includes('wave')||lc.includes('hello')){action='What time is it?';}
-  else if(lc.includes('stop')||lc.includes('palm')||lc.includes('open')){synth.cancel();isSpeaking=false;setRing('idle');addMsg('gmsg','👁 Stop gesture — voice cancelled.');return;}
-  else if(lc.includes('peace')||lc.includes('victory')||lc.includes('two')){action='Tell me a fun fact';}
-  else if(lc.includes('fist')||lc.includes('closed')){action='Set a 2 minute timer';}
-  else if(lc.includes('point')||lc.includes('index')){action='Give me a motivational quote';}
-  else{addMsg('gmsg','👁 Gesture: '+g);return;}
-  addMsg('gmsg','👁 Gesture: '+g+' → "'+action+'"');
+  setRing('gesture'); beep(500, .1, 'sine', .2);
+  const lc = g.toLowerCase();
+  let action = '';
+
+  if(lc.includes('thumbs up') || lc.includes('thumbs_up') || lc.includes('thumb up')){
+    action = 'Give me music suggestions';
+  } else if(lc.includes('thumbs down') || lc.includes('thumbs_down') || lc.includes('thumb down')){
+    action = 'Tell me a joke';
+  } else if(lc.includes('wave') || lc.includes('hello') || lc.includes('hi')){
+    action = 'What time is it?';
+  } else if(lc.includes('stop') || lc.includes('palm') || lc.includes('open hand')){
+    synth.cancel(); isSpeaking = false; setRing('idle');
+    addMsg('gmsg', '👁 Stop gesture — voice cancelled.'); return;
+  } else if(lc.includes('peace') || lc.includes('victory') || lc.includes('two')){
+    action = 'Tell me a fun fact';
+  } else if(lc.includes('fist') || lc.includes('closed')){
+    action = 'Set a 2 minute timer';
+  } else if(lc.includes('point') || lc.includes('index') || lc.includes('one')){
+    action = 'Give me a motivational quote';
+  } else if(lc.includes('like') || lc.includes('ok') || lc.includes('okay')){
+    action = 'What can you do?';
+  } else {
+    addMsg('gmsg', '👁 Gesture: ' + g); return;
+  }
+  addMsg('gmsg', '👁 Gesture: ' + g + ' → "' + action + '"');
   handleInput(action);
 }
 
 // ── TIMER ──────────────────────────────────────
-function setTimer(secs,label){
-  if(timerInterval)clearInterval(timerInterval);
-  const end=Date.now()+secs*1000;
+function setTimer(secs, label){
+  if(timerInterval) clearInterval(timerInterval);
+  const end = Date.now() + secs * 1000;
   document.getElementById('timerBar').classList.add('active');
-  document.getElementById('timerLabel').textContent=label;
-  timerInterval=setInterval(()=>{
-    const r=Math.max(0,Math.ceil((end-Date.now())/1000));
-    const m=Math.floor(r/60),s=r%60;
-    document.getElementById('timerDisplay').textContent=m+':'+(s<10?'0':'')+s;
-    if(r<=0){clearInterval(timerInterval);document.getElementById('timerBar').classList.remove('active');sfxTimer();speak('Timer done, Boss! Your '+label+' is complete.');addMsg('jarvis','⏱ Timer complete: '+label);}
-  },500);
+  document.getElementById('timerLabel').textContent = label;
+  timerInterval = setInterval(() => {
+    const r = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+    const m = Math.floor(r / 60), s = r % 60;
+    document.getElementById('timerDisplay').textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    if(r <= 0){
+      clearInterval(timerInterval);
+      document.getElementById('timerBar').classList.remove('active');
+      sfxTimer();
+      speak('Timer done, Boss! Your ' + label + ' is complete.');
+      addMsg('jarvis', '⏱ Timer complete: ' + label);
+    }
+  }, 500);
 }
 
 // ── CLAUDE API ─────────────────────────────────
 async function askClaude(msg){
-  if(!API_KEY||API_KEY.includes('PASTE'))return localFallback(msg);
-  history.push({role:'user',content:msg});
-  const sys=`You are JARVIS, a voice AI assistant like Alexa but smarter — powered by Claude. Always call the user "Boss". Be concise (1-3 sentences), warm, witty, helpful. For timers say exactly e.g. "Setting a 5 minute timer, Boss." For music give 3-5 specific recommendations. Be honest when you don't know something. No markdown, no bullet points — plain conversational speech only.`;
+  history.push({role:'user', content:msg});
+
+  const sys = `You are JARVIS, a highly advanced voice AI assistant. Always address the user as "Boss". Be concise (1-3 sentences max), warm, confident, and slightly witty. 
+
+Key rules:
+- Plain speech only — no markdown, no bullet points, no asterisks, no formatting
+- For timers say exactly: "Setting a 5 minute timer now, Boss."
+- For music give 3 specific song/artist recommendations spoken naturally
+- For weather, give a practical answer even if you can't check live data
+- Be honest but helpful when you don't have real-time info
+- Sound like a sophisticated AI assistant — confident, precise, a touch of personality
+- Keep answers under 40 words for most responses`;
+
   try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:300,system:sys,messages:history.slice(-10)})});
-    if(!r.ok){const e=await r.json();history.pop();return 'API error Boss: '+(e.error?.message||r.status);}
-    const d=await r.json();const reply=d.content.map(c=>c.text||'').join('').trim();
-    history.push({role:'assistant',content:reply});return reply;
-  }catch(e){history.pop();return 'Network error, Boss: '+e.message;}
+    const r = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-5',
+        max_tokens: 300,
+        system: sys,
+        messages: history.slice(-12)
+      })
+    });
+
+    if(!r.ok){
+      const e = await r.json();
+      history.pop();
+      // Fallback gracefully
+      return localFallback(msg);
+    }
+
+    const d = await r.json();
+    const reply = d.content.map(c => c.text || '').join('').trim();
+    history.push({role:'assistant', content:reply});
+    return reply;
+  } catch(e){
+    history.pop();
+    return localFallback(msg);
+  }
 }
 
 function localFallback(msg){
-  const m=msg.toLowerCase();
-  if(m.includes('time'))return 'It is '+new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})+', Boss.';
-  if(m.includes('date'))return 'Today is '+new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'})+', Boss.';
-  if(m.includes('joke')){const j=['Why do programmers prefer dark mode? Because light attracts bugs, Boss.','I told my AI to go outside. It opened a new tab, Boss.'];return j[Math.floor(Math.random()*j.length)];}
-  return 'I am running in limited mode, Boss. Please add your Anthropic API key in the code to unlock full intelligence.';
+  const m = msg.toLowerCase();
+  const now = new Date();
+
+  if(m.includes('time') && !m.includes('timer')){
+    return 'It is ' + now.toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'}) + ', Boss.';
+  }
+  if(m.includes('date') || m.includes('day')){
+    return 'Today is ' + now.toLocaleDateString('en-IN', {weekday:'long', year:'numeric', month:'long', day:'numeric'}) + ', Boss.';
+  }
+  if(m.includes('joke')){
+    const jokes = [
+      "Why do programmers prefer dark mode? Because light attracts bugs, Boss.",
+      "I told my AI to go outside. It opened a new tab, Boss.",
+      "Why don't scientists trust atoms? Because they make up everything, Boss.",
+      "I'm reading a book about anti-gravity. It's impossible to put down, Boss."
+    ];
+    return jokes[Math.floor(Math.random() * jokes.length)];
+  }
+  if(m.includes('fact')){
+    const facts = [
+      "Honey never spoils. Archaeologists have found 3000-year-old honey in Egyptian tombs that was still edible, Boss.",
+      "A day on Venus is longer than a year on Venus, Boss. Quite the existential crisis.",
+      "Octopuses have three hearts and blue blood, Boss. Genuinely impressive engineering.",
+      "The Eiffel Tower grows about 15 cm taller in summer due to thermal expansion, Boss."
+    ];
+    return facts[Math.floor(Math.random() * facts.length)];
+  }
+  if(m.includes('motivat') || m.includes('quote')){
+    const quotes = [
+      "The only way to do great work is to love what you do. Steve Jobs said that, Boss, and I believe he was onto something.",
+      "Success is not final, failure is not fatal — it is the courage to continue that counts, Boss.",
+      "You are capable of more than you know, Boss. Now go prove it."
+    ];
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  }
+  if(m.includes('music') || m.includes('song')){
+    return "Try Blinding Lights by The Weeknd, Levitating by Dua Lipa, or As It Was by Harry Styles, Boss. Excellent choices for any mood.";
+  }
+  if(m.includes('weather')){
+    return "I don't have live weather access right now, Boss. Check your weather app for the most accurate forecast in your area.";
+  }
+  if(m.includes('what can you do') || m.includes('features') || m.includes('help')){
+    return "I can answer questions, set timers, tell jokes and facts, give music suggestions, motivational quotes, time and date — and with gesture mode I can even read your hand signals, Boss.";
+  }
+
+  return "I'm having a moment, Boss. Try rephrasing your question and I'll do my best.";
 }
 
-// ── HANDLE INPUT ───────────────────────────────
+// ── ALEXA-STYLE BUILT-IN COMMANDS ──────────────
+const GREETINGS = ['hello','hi','hey','good morning','good afternoon','good evening','howdy'];
+const THANKS = ['thanks','thank you','thank you jarvis','cheers','appreciate it'];
+
 async function handleInput(text){
-  if(!text.trim())return;
-  turns++;totalWords+=text.split(' ').length;
-  document.getElementById('statTurns').textContent=turns;
-  document.getElementById('statWords').textContent=totalWords;
-  addMsg('user',text);
+  if(!text || !text.trim()) return;
 
-  // ── BUILT-IN COMMANDS (Alexa-style local) ──
-  const lc=text.toLowerCase();
+  const trimmed = text.trim();
+  turns++; totalWords += trimmed.split(' ').length;
+  document.getElementById('statTurns').textContent = turns;
+  document.getElementById('statWords').textContent = totalWords;
+  addMsg('user', trimmed);
 
-  // Gesture mode control
-  if(lc.includes('enable gesture')||lc.includes('gesture mode')||lc.includes('turn on gesture')||lc.includes('open camera')){
-    if(!gestureEnabled)await enableGesture();else speak('Gesture mode is already on, Boss.');return;
-  }
-  if(lc.includes('disable gesture')||lc.includes('turn off gesture')||lc.includes('close camera')){
-    if(gestureEnabled)disableGesture();else speak('Gesture mode is already off, Boss.');return;
-  }
+  const lc = trimmed.toLowerCase().replace(/[^\w\s]/g, '').trim();
 
-  // Stop / cancel
-  if(lc==='stop'||lc.includes('stop speaking')||lc.includes('be quiet')||lc.includes('shut up')){
-    synth.cancel();isSpeaking=false;setRing('idle');speak('Okay, Boss.');return;
+  // ── GREETINGS ──
+  if(GREETINGS.some(g => lc === g || lc.startsWith(g + ' '))){
+    const h = new Date().getHours();
+    const g2 = h < 12 ? 'Good morning' : h < 17 ? 'Good afternoon' : 'Good evening';
+    const rep = g2 + ', Boss. How can I assist you today?';
+    addMsg('jarvis', rep); speak(rep); return;
   }
 
-  // Volume
-  if(lc.includes('volume up')){speak('I cannot control system volume directly, Boss. Please use your device volume buttons.');return;}
-  if(lc.includes('volume down')){speak('Please use your device volume buttons, Boss.');return;}
-
-  // Timer parsing
-  const tm=text.match(/(\d+)\s*(second|sec|minute|min|hour|hr)/i);
-  if(tm&&(lc.includes('timer')||lc.includes('set')||lc.includes('remind'))){
-    let s=parseInt(tm[1]);const u=tm[2].toLowerCase();
-    if(u.startsWith('min'))s*=60;if(u.startsWith('hour')||u.startsWith('hr'))s*=3600;
-    setTimer(s,tm[1]+' '+tm[2]);
-    speak('Setting a '+tm[1]+' '+tm[2]+' timer now, Boss.');
-    addMsg('jarvis','⏱ Timer set: '+tm[1]+' '+tm[2]);return;
+  // ── THANKS ──
+  if(THANKS.some(t => lc.includes(t))){
+    const rep = "Always happy to help, Boss.";
+    addMsg('jarvis', rep); speak(rep); return;
   }
 
-  // Cancel timer
-  if(lc.includes('cancel timer')||lc.includes('stop timer')){
-    if(timerInterval){clearInterval(timerInterval);document.getElementById('timerBar').classList.remove('active');}
-    speak('Timer cancelled, Boss.');addMsg('jarvis','⏱ Timer cancelled.');return;
+  // ── GESTURE MODE ──
+  if(lc.includes('enable gesture') || lc.includes('gesture mode') || lc.includes('turn on gesture') || lc.includes('open camera') || lc.includes('activate gesture')){
+    if(!gestureEnabled) await enableGesture(); else speak('Gesture mode is already active, Boss.'); return;
+  }
+  if(lc.includes('disable gesture') || lc.includes('turn off gesture') || lc.includes('close camera') || lc.includes('deactivate gesture')){
+    if(gestureEnabled) disableGesture(); else speak('Gesture mode is already off, Boss.'); return;
   }
 
-  // Time/Date (instant)
-  if(lc==='what time is it'||lc==='time'||lc.includes('what time')){
-    const t=new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
-    speak('It is '+t+', Boss.');addMsg('jarvis','🕐 '+t);return;
-  }
-  if(lc.includes('what day')||lc.includes('what date')||lc==='date'){
-    const d=new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
-    speak('Today is '+d+', Boss.');addMsg('jarvis','📅 '+d);return;
+  // ── STOP / CANCEL ──
+  if(lc === 'stop' || lc.includes('stop speaking') || lc.includes('be quiet') || lc.includes('shut up') || lc.includes('pause') || lc.includes('cancel')){
+    synth.cancel(); isSpeaking = false; setRing('idle'); speak('Okay, Boss.'); return;
   }
 
-  // Clear chat
-  if(lc.includes('clear chat')||lc.includes('clear history')){clearChat();speak('Done, Boss.');return;}
+  // ── VOLUME ──
+  if(lc.includes('volume up')){ speak('Please use your device volume buttons, Boss.'); return; }
+  if(lc.includes('volume down')){ speak('Reducing volume isn\'t in my power directly, Boss. Try your device buttons.'); return; }
 
-  // AI for everything else
-  setRing('think');isThinking=true;sfxThink();showTyping();
+  // ── ALARMS / REMINDERS ──
+  if(lc.includes('wake me up') || lc.includes('alarm')){
+    const tMatch = trimmed.match(/(\d{1,2}):?(\d{2})?\s*(am|pm)?/i);
+    if(tMatch){ speak('I can\'t set device alarms directly, Boss. Please use your clock app for alarms.'); return; }
+  }
+
+  // ── TIMER ──
+  const timerMatch = trimmed.match(/(\d+(?:\.\d+)?)\s*(second|sec|minute|min|hour|hr)/i);
+  if(timerMatch && (lc.includes('timer') || lc.includes('set') || lc.includes('remind') || lc.includes('count'))){
+    let secs = parseFloat(timerMatch[1]);
+    const unit = timerMatch[2].toLowerCase();
+    if(unit.startsWith('min')) secs *= 60;
+    if(unit.startsWith('hour') || unit.startsWith('hr')) secs *= 3600;
+    const label = timerMatch[1] + ' ' + timerMatch[2];
+    setTimer(secs, label);
+    speak('Setting a ' + label + ' timer now, Boss.');
+    addMsg('jarvis', '⏱ Timer set: ' + label); return;
+  }
+
+  // ── CANCEL TIMER ──
+  if(lc.includes('cancel timer') || lc.includes('stop timer') || lc.includes('clear timer')){
+    if(timerInterval){ clearInterval(timerInterval); document.getElementById('timerBar').classList.remove('active'); }
+    speak('Timer cancelled, Boss.'); addMsg('jarvis', '⏱ Timer cancelled.'); return;
+  }
+
+  // ── TIME ──
+  if(lc === 'what time is it' || lc === 'time' || lc.includes('what time') || lc.includes('current time')){
+    const t = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'});
+    speak('It is ' + t + ', Boss.'); addMsg('jarvis', '🕐 ' + t); return;
+  }
+
+  // ── DATE ──
+  if(lc.includes('what day') || lc.includes('what date') || lc === 'date' || lc.includes('today\'s date')){
+    const d = new Date().toLocaleDateString('en-IN', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+    speak('Today is ' + d + ', Boss.'); addMsg('jarvis', '📅 ' + d); return;
+  }
+
+  // ── CLEAR CHAT ──
+  if(lc.includes('clear chat') || lc.includes('clear history') || lc.includes('reset')){
+    clearChat(); speak('Done, Boss. Fresh start.'); return;
+  }
+
+  // ── MUTE/UNMUTE ──
+  if(lc === 'mute' || lc.includes('turn off voice') || lc.includes('silent mode')){
+    voiceOut = false; updateVoiceBtn(); addMsg('jarvis', '🔇 Voice output muted.'); return;
+  }
+  if(lc === 'unmute' || lc.includes('turn on voice') || lc.includes('voice on')){
+    voiceOut = true; updateVoiceBtn(); speak('Voice is back on, Boss.'); return;
+  }
+
+  // ── AI for everything else ──
+  setRing('think'); isThinking = true; sfxThink(); showTyping();
   try{
-    const reply=await askClaude(text);
-    removeTyping();isThinking=false;
-    addMsg('jarvis',reply);speak(reply);
-  }catch(e){
-    removeTyping();isThinking=false;
-    const err='Error Boss: '+e.message;addMsg('jarvis',err);speak(err);
+    const reply = await askClaude(trimmed);
+    removeTyping(); isThinking = false;
+    addMsg('jarvis', reply);
+    speak(reply);
+  } catch(e){
+    removeTyping(); isThinking = false;
+    const err = 'Something went wrong, Boss. Please try again.';
+    addMsg('jarvis', err); speak(err);
   }
 }
 
 // ── CHAT UI ────────────────────────────────────
-function addMsg(role,text){
-  const box=document.getElementById('chatBox');
-  const div=document.createElement('div');div.className='msg '+role;
-  const now=new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
-  const av=role==='jarvis'?'🤖':role==='gmsg'?'👁':'👤';
-  div.innerHTML=`<div class="msg-avatar">${av}</div><div><div class="msg-bubble">${esc(text)}</div><div class="msg-time">${now}</div></div>`;
-  box.appendChild(div);box.scrollTop=box.scrollHeight;
+function addMsg(role, text){
+  const box = document.getElementById('chatBox');
+  const div = document.createElement('div'); div.className = 'msg ' + role;
+  const now = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'});
+  const av = role === 'jarvis' ? '🤖' : role === 'gmsg' ? '👁' : '👤';
+  div.innerHTML = `<div class="msg-avatar">${av}</div><div><div class="msg-bubble">${esc(text)}</div><div class="msg-time">${now}</div></div>`;
+  box.appendChild(div); box.scrollTop = box.scrollHeight;
 }
-function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function esc(t){ return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function showTyping(){
-  const box=document.getElementById('chatBox');
-  const el=document.createElement('div');el.className='msg jarvis';el.id='typingMsg';
-  el.innerHTML=`<div class="msg-avatar">🤖</div><div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
-  box.appendChild(el);box.scrollTop=box.scrollHeight;
+  const box = document.getElementById('chatBox');
+  const el = document.createElement('div'); el.className = 'msg jarvis'; el.id = 'typingMsg';
+  el.innerHTML = `<div class="msg-avatar">🤖</div><div class="msg-bubble"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
+  box.appendChild(el); box.scrollTop = box.scrollHeight;
 }
-function removeTyping(){const t=document.getElementById('typingMsg');if(t)t.remove();}
-function clearChat(){document.getElementById('chatBox').innerHTML='';history=[];turns=0;totalWords=0;document.getElementById('statTurns').textContent=0;document.getElementById('statWords').textContent=0;}
-function sendText(){const i=document.getElementById('textInput');const t=i.value.trim();if(!t)return;i.value='';handleInput(t);}
-function quickCmd(c){handleInput(c);}
+function removeTyping(){ const t = document.getElementById('typingMsg'); if(t) t.remove(); }
+function clearChat(){ document.getElementById('chatBox').innerHTML = ''; history = []; turns = 0; totalWords = 0; document.getElementById('statTurns').textContent = 0; document.getElementById('statWords').textContent = 0; }
+function sendText(){ const i = document.getElementById('textInput'); const t = i.value.trim(); if(!t) return; i.value = ''; handleInput(t); }
+function quickCmd(c){ handleInput(c); }
 
 // ── SPEAK ──────────────────────────────────────
 function speak(text){
-  if(!voiceOut||!synth)return;
+  if(!voiceOut || !synth) return;
   synth.cancel();
-  const u=new SpeechSynthesisUtterance(text);
-  if(preferredVoice)u.voice=preferredVoice;
-  u.rate=0.97;u.pitch=1.05;u.volume=0.95;
-  u.onstart=()=>{isSpeaking=true;setRing('speak');};
-  u.onend=()=>{isSpeaking=false;setRing('idle');};
-  u.onerror=()=>{isSpeaking=false;setRing('idle');};
+  const u = new SpeechSynthesisUtterance(text);
+  if(preferredVoice) u.voice = preferredVoice;
+  u.rate = 0.97; u.pitch = 1.05; u.volume = 0.95;
+  u.onstart = () => { isSpeaking = true; setRing('speak'); };
+  u.onend = () => {
+    isSpeaking = false; setRing('idle');
+    // Restart wake listener after speaking if not listening
+    if(!isListening && !wakeStarted){
+      clearTimeout(wakeRestartTimer);
+      wakeRestartTimer = setTimeout(() => {
+        wakeActive_lockout = false;
+        wakeActive = false;
+        startWakeListener();
+      }, 500);
+    }
+  };
+  u.onerror = () => { isSpeaking = false; setRing('idle'); };
   synth.speak(u);
 }
+
+function updateVoiceBtn(){
+  const b = document.getElementById('voiceOutBtn');
+  b.textContent = (voiceOut ? '🔊' : '🔇') + ' Voice';
+  b.className = 'ctrl' + (voiceOut ? ' on' : '');
+}
+
 function toggleVoiceOut(){
-  voiceOut=!voiceOut;
-  const b=document.getElementById('voiceOutBtn');
-  b.textContent=(voiceOut?'🔊':'🔇')+' Voice';b.className='ctrl'+(voiceOut?' on':'');
-  if(!voiceOut)synth.cancel();
+  voiceOut = !voiceOut;
+  updateVoiceBtn();
+  if(!voiceOut) synth.cancel();
 }
 
 // ── INIT ───────────────────────────────────────
 function boot(){
-  if(AC&&AC.state==='suspended')AC.resume();
-  if(!wakeStarted)startWakeListener();
+  if(AC && AC.state === 'suspended') AC.resume();
+  if(!wakeStarted) startWakeListener();
 }
-document.addEventListener('click',boot,{once:true});
-document.addEventListener('touchstart',boot,{once:true});
 
-window.addEventListener('load',()=>{
-  const h=new Date().getHours();const g=h<12?'morning':h<17?'afternoon':'evening';
-  addMsg('jarvis','Good '+g+', Boss. Tap the screen once to activate. Then say "Hey JARVIS" anytime to wake me up. Say "Hey JARVIS enable gesture mode" to activate camera control.');
+document.addEventListener('click', boot, {once:true});
+document.addEventListener('touchstart', boot, {once:true});
+
+window.addEventListener('load', () => {
+  const h = new Date().getHours();
+  const g = h < 12 ? 'morning' : h < 17 ? 'afternoon' : 'evening';
+  addMsg('jarvis', 'Good ' + g + ', Boss. Tap anywhere once to activate, then say "Hey JARVIS" anytime to wake me. For hands-free control, say "Hey JARVIS enable gesture mode".');
 });
 </script>
 </body>
